@@ -1,0 +1,68 @@
+import * as React from 'react';
+import { Text, Image, View, StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
+import AssetExample from './components/AssetExample';
+import { Card } from 'react-native-paper';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+       <Image style={styles.duolingo} source={{ uri: 'https://marcas-logos.net/wp-content/uploads/2022/08/Duolingo-Logotipo-2012.png' }} />
+      <Text style={styles.paragraph}>
+      duolingo
+      </Text>
+      <Text style={styles.paragraphy}>
+      learn a language for free Forever
+      </Text>
+      <button style={styles.butao}>GET STARTED</button>
+       <button style={styles.butaom}>I ALREADY HAVE AN ACCOUNT</button>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: Constants.statusBarHeight,
+    padding: 8,
+    backgroundColor: '#ffffff',
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 44,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#58cc02',
+  },
+  paragraphy: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '##afafaf',
+  },
+  duolingo: {
+    width: 120,
+    height: 120,
+  
+  },
+    butao: {
+      backgroundColor: '#58cc02',
+      borderRadius: '8px',
+      margin: '34px',
+      color: '#ffffff',
+      padding: 20,
+      fontSize: 20,
+      fontWeight: 'bold',
+  },
+     butaom: {
+      backgroundColor: '#ffffff',
+      borderRadius: '8px',
+      margin: '34px',
+      color: '#58cc02',
+      padding: 20,
+      fontSize: 20,
+      fontWeight: 'bold',
+  },
+});
